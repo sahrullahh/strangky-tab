@@ -1,0 +1,12 @@
+{
+  "name": "strangky",
+  "version": "1.0.0",
+  "description": "extension tab for chrome",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch skecth/css/main.scss skecth/css/main.css"
+  },
+  "author": "Mohammad Sahrullah",
+  "license": "ISC"
+}

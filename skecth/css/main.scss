@@ -1,0 +1,224 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  user-select: none;
+}
+
+.modal-overlay {
+  width: 100%;
+  overflow: auto;
+  padding: 10px;
+  display: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  .copyright {
+    position: absolute;
+    bottom: 5%;
+    color: #f2f2f2;
+    right: 5%;
+  }
+  .sm {
+    margin-top: 2rem;
+  }
+  ul {
+    margin-top: 1rem;
+    li {
+      padding: 5px 10px;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+  .modal {
+    color: #fff;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif, "Segoe UI";
+    margin-top: 5rem;
+    background: rgba(0, 0, 0, 0.9);
+    .modal-head {
+      h2 {
+        font-size: 25px;
+        font-weight: normal;
+      }
+    }
+    .modal-body {
+      margin-top: 2rem;
+      input {
+        font-family: "Lexend", sans-serif, "Segoe UI";
+        width: 100%;
+        background: #1a1a1a;
+        border: 1px solid #dcdcdc;
+        color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .radio {
+        width: auto;
+      }
+      label {
+        margin-left: 10px;
+      }
+      button {
+        cursor: pointer;
+        font-family: "Lexend", sans-serif, "Segoe UI";
+        padding: 10px;
+        &:hover {
+          background: #fff;
+          color: #000000;
+        }
+      }
+      .changename {
+        background: #000;
+        border: 1px solid #dcdcdc;
+        color: #fff;
+        margin-top: 1rem;
+      }
+      .changefocus {
+        background: #000;
+        border: 1px solid #dcdcdc;
+        color: #fff;
+        margin-top: 1rem;
+      }
+      .changebackground {
+        background: #000;
+        border: 1px solid #dcdcdc;
+        color: #fff;
+      }
+      .closebtn {
+        float: right;
+        margin-top: -2rem;
+        background: #000;
+        border: 1px solid #dcdcdc;
+        color: #fff;
+      }
+    }
+  }
+}
+
+body {
+  overflow: hidden;
+  // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  //   url("../background/85327.png");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+  padding: 10px;
+  height: 100vh;
+  -webkit-font-smoohting: antialiased;
+  font-family: "Lexend", sans-serif, "Segoe UI";
+
+  .settings {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    bottom: 4%;
+    position: absolute;
+    left: 1%;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .pm {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  header {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    p {
+      font-size: 1.6vh;
+      font-weight: normal;
+    }
+    .infosholat {
+      float: right;
+    }
+  }
+  .quote {
+    color: #fff;
+    font-size: 2vh;
+  }
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    margin-top: 8%;
+    .clock {
+      font-weight: lighter;
+      font-size: 23vh;
+    }
+
+    h1 {
+      font-size: 5vh;
+      font-weight: 400;
+      color: #fff;
+      .hero-text {
+        color: #b5edfc;
+      }
+    }
+    .dateday {
+      // float: right;
+      // margin-right: 10px;
+      color: #fff;
+
+      font-size: 1.8vh;
+    }
+    .hero-section {
+      animation: 1s slideUp ease-in-out;
+      .focus {
+        .today {
+          font-size: 20px;
+          font-weight: normal;
+          color: #f2f2f2;
+        }
+        .textfocus {
+          margin-top: 1rem;
+          font-size: 30px;
+          font-weight: normal;
+          color: #fff;
+        }
+      }
+      .hero-body {
+        input {
+          margin-top: 1rem;
+          max-width: 700px;
+          display: none;
+          width: 100%;
+          outline: none;
+          background-color: #fff;
+          border: 5px solid #7ea4af;
+          font-family: "Lexend", sans-serif, "Segoe UI";
+          box-sizing: border-box;
+          padding: 20px;
+          color: #000;
+          font-size: 15px;
+          border-radius: 50px;
+        }
+      }
+      .copyright {
+        color: #fff;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transition: translateY(0px);
+    opacity: 1;
+  }
+}

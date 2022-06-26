@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Strangky",
+    "description": "Strangky is extension for tab custom, you can customize the tab chrome natively, Created By Mohammad Sahrullah",
+    "version": "0.1",
+    "chrome_url_overrides": {
+        "newtab": "skecth/index.html"
+    },
+    "background": {
+        "service_worker": "skecth/script/background.js"
+    },
+    "permissions": [
+        "storage",  
+        "activeTab", 
+        "management", 	
+        "bookmarks",
+        "sessions",
+        "tabs"],
+    "action":{
+        "default_popup": "skecth/popup.html"
+    }    
+}

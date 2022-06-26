@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Where are you going?</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <header>
+      <p>Strangky<span class="os-info"></span></p>
+      <p class="info-sholat"></p>
+    </header>
+    <div class="modal-overlay">
+      <div class="modal">
+        <div class="modal-head">
+          <h2>Settings</h2>
+        </div>
+        <div class="modal-body">
+          <p>Your name</p>
+          <br />
+          <input
+            type="text"
+            placeholder=""
+            value="Unamed"
+            autocomplete="off"
+            id="name"
+          />
+          <button class="changename" onclick="changeName()">Change name</button>
+          <br /><br />
+          <p>Your focus main today</p>
+          <br />
+          <input
+            type="text"
+            placeholder=""
+            value=""
+            autocomplete="off"
+            id="focused"
+          />
+          <button class="changefocus">Change Focus</button>
+          <br /><br />
+          <input
+            type="radio"
+            id="live-background"
+            class="radio"
+            name="background"
+            checked
+          />
+          <label for="live-background"> Use live background </label>
+          <br /><br />
+          <input
+            type="radio"
+            id="custom-background"
+            class="radio"
+            name="background"
+          />
+          <label for="custom-background"> Use custom background </label>
+          <br /><br />
+          <button class="changebackground" id="upload_button">
+            <span style="margin-right: 5px"><i class="fas fa-image"></i></span
+            >Change background</button
+          ><br />
+          <br /><br />
+          Select Clock Hours :
+          <select name="" id="myclock">
+            <option id="12hours" value="12">12 Hours</option>
+            <option id="24hours" value="24">24 Hours</option>
+          </select>
+          <br />
+          <p class="sm">Social media</p>
+          <ul>
+            <li>
+              <a href="https://github.com/sahrullahh"
+                ><span style="margin-right: 10px"
+                  ><i class="fab fa-github"></i></span
+                >Github</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/shrullhhh04"
+                ><span style="margin-right: 10px"
+                  ><i class="fab fa-instagram"></i></span
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><span style="margin-right: 10px"
+                  ><i class="fab fa-facebook"></i></span
+                >Facebook</a
+              >
+            </li>
+          </ul>
+          <button class="closebtn">close</button>
+        </div>
+      </div>
+      <p class="copyright">Create By Mohammad Sahrullah</p>
+    </div>
+    <button class="settings">
+      <span><i class="fas fa-cog"></i></span>
+    </button>
+    <div class="container">
+      <section class="hero-section">
+        <div class="hero-body">
+          <h1 class="clock"></h1>
+          <h1 class="ml7">
+            <span class="text-wrapper">
+              <span class="letters"></span>
+            </span>
+          </h1>
+          <br />
+        </div>
+        <br />
+        <p class="dateday"></p>
+        <br /><br />
+        <div class="focus">
+          <h1 class="today">today</h1>
+          <h2 class="textfocus">Coding</h2>
+        </div>
+      </section>
+      <input id="files" type="file" hidden />
+    </div>
+    <script src="script/index.js"></script>
+  </body>
+</html>
