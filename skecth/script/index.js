@@ -41,7 +41,7 @@ function liveBackground() {
       .then((resp) => resp)
       .then((imagelists) => {
         let selectedImage = imagelists.url;
-        document.body.style.background = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${selectedImage})`;
+        document.body.style.background = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${selectedImage})`;
         document.body.style.backgroundRepeat = "no-repeat";
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundPosition = "center";
@@ -94,36 +94,6 @@ if (!localStorage.getItem("names")) {
 } else {
   inputName.value = localStorage.getItem("names");
   named = localStorage.getItem("names");
-}
-
-var changeFocus = document.querySelector(".changefocus");
-var inputFocus = document.querySelector("#focused");
-var focused = document.querySelector(".textfocus");
-
-changeFocus.addEventListener("click", function () {
-  var changeFocusInput = document.querySelector("#focused").value;
-  localStorage.setItem("focus", changeFocusInput);
-  focused.innerHTML = changeFocusInput;
-  if (localStorage.getItem("focus").length > 0) {
-    document.querySelector(".today").innerHTML = "today";
-  } else {
-    document.querySelector(".today").innerHTML =
-      "What is your main focus for today?";
-  }
-});
-
-if (!localStorage.getItem("focus")) {
-  focused.innerHTML = "";
-  inputFocus = "";
-} else {
-  inputFocus.value = localStorage.getItem("focus");
-  focused.innerHTML = localStorage.getItem("focus");
-}
-if (localStorage.getItem("focus").length > 0) {
-  document.querySelector(".today").innerHTML = "today";
-} else {
-  document.querySelector(".today").innerHTML =
-    "What is your main focus for today?";
 }
 
 function currentTime() {
@@ -191,13 +161,13 @@ function currentTime() {
   if (hours < 1) {
     letters.innerHTML = "Midnight, " + named + ".";
   } else if (hours < 11) {
-    letters.innerHTML = "Good morning, " + named + ".";
+    letters.innerHTML = "Good Morning, " + named + ".";
   } else if (hours < 18) {
-    letters.innerHTML = "Good afternoon, " + named + ".";
+    letters.innerHTML = "Good Afternoon, " + named + ".";
   } else if (hours < 23) {
-    letters.innerHTML = "Good evening, " + named + ".";
+    letters.innerHTML = "Good Evening, " + named + ".";
   } else {
-    letters.innerHTML = "Good evening, " + named + ".";
+    letters.innerHTML = "Good Evening, " + named + ".";
   }
 
   if (hours < 2) {
@@ -291,7 +261,7 @@ function handleFileSelect(evt) {
 function loadFromLocalStorage() {
   var images = JSON.parse(localStorage.getItem("images"));
 
-  if (images && images.length > 0) {
+  if (images && images !== null) {
     imagesObject = images;
 
     displayNumberOfImgs();
@@ -310,7 +280,7 @@ function addImage(imgData) {
 
 function displayImgData(imgData) {
   document.body.style.background =
-    "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" +
+    "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" +
     imgData +
     "')";
   document.body.style.backgroundRepeat = "no-repeat";

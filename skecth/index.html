@@ -20,8 +20,7 @@
   </head>
   <body>
     <header>
-      <p>Strangky<span class="os-info"></span></p>
-      <p class="info-sholat"></p>
+      <!-- <p class="info-sholat"></p> -->
     </header>
     <div class="modal-overlay">
       <div class="modal">
@@ -39,17 +38,6 @@
             id="name"
           />
           <button class="changename" onclick="changeName()">Change name</button>
-          <br /><br />
-          <p>Your focus main today</p>
-          <br />
-          <input
-            type="text"
-            placeholder=""
-            value=""
-            autocomplete="off"
-            id="focused"
-          />
-          <button class="changefocus">Change Focus</button>
           <br /><br />
           <input
             type="radio"
@@ -111,6 +99,9 @@
     <button class="settings">
       <span><i class="fas fa-cog"></i></span>
     </button>
+    <footer>
+      <p>Strangky<span class="os-info"></span></p>
+    </footer>
     <div class="container">
       <section class="hero-section">
         <div class="hero-body">
@@ -126,8 +117,10 @@
         <p class="dateday"></p>
         <br /><br />
         <div class="focus">
-          <h1 class="today">today</h1>
-          <h2 class="textfocus">Coding</h2>
+          <h1 class="today">
+            today
+            <p class="info-sholat"></p>
+          </h1>
         </div>
       </section>
       <input id="files" type="file" hidden />

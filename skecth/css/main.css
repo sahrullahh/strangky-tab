@@ -114,9 +114,20 @@ body .settings {
   border: none;
   outline: none;
   color: #fff;
-  bottom: 4%;
+  bottom: 2.4%;
   position: absolute;
-  left: 1%;
+  right: 3%;
+  cursor: pointer;
+  font-size: 15px;
+}
+body footer {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  bottom: 2.4%;
+  position: absolute;
+  right: 5%;
   cursor: pointer;
   font-size: 15px;
 }
@@ -124,35 +135,27 @@ body .pm {
   font-size: 20px;
   font-weight: bold;
 }
-body header {
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  color: #fff;
-}
-body header p {
-  font-size: 1.6vh;
+body .infosholat {
+  font-size: 1.2vh;
   font-weight: normal;
-}
-body header .infosholat {
-  float: right;
 }
 body .quote {
   color: #fff;
-  font-size: 2vh;
+  font-size: 1vh;
 }
 body .container {
-  max-width: 1200px;
   width: 100%;
-  text-align: center;
-  margin-top: 8%;
+  text-align: left;
+  left: 3%;
+  position: absolute;
+  bottom: 5%;
 }
 body .container .clock {
   font-weight: lighter;
-  font-size: 23vh;
+  font-size: 12vh;
 }
 body .container h1 {
-  font-size: 5vh;
+  font-size: 2.5vh;
   font-weight: 400;
   color: #fff;
 }
@@ -167,13 +170,13 @@ body .container .hero-section {
   animation: 1s slideUp ease-in-out;
 }
 body .container .hero-section .focus .today {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: normal;
   color: #f2f2f2;
 }
 body .container .hero-section .focus .textfocus {
   margin-top: 1rem;
-  font-size: 30px;
+  font-size: 15px;
   font-weight: normal;
   color: #fff;
 }
