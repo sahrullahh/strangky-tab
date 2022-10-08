@@ -37,14 +37,23 @@ function liveBackground() {
   localStorage.removeItem("images");
   changeBg.style.display = "none";
   var liveBgTime = setInterval(function () {
-    fetch("https://source.unsplash.com/random/1024x600")
+    fetch(
+      "https://source.unsplash.com/random/" +
+        window.screen.availWidth +
+        "x" +
+        window.screen.availHeight
+    )
       .then((resp) => resp)
       .then((imagelists) => {
         let selectedImage = imagelists.url;
-        document.body.style.background = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${selectedImage})`;
-        document.body.style.backgroundRepeat = "no-repeat";
-        document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundPosition = "center";
+        document.querySelector(
+          ".background"
+        ).style.background = `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${selectedImage})`;
+        document.querySelector(".background").style.backgroundRepeat =
+          "no-repeat";
+        document.querySelector(".background").style.backgroundSize = "cover";
+        document.querySelector(".background").style.backgroundPosition =
+          "center";
       })
       .catch(() => {
         error();
@@ -279,13 +288,13 @@ function addImage(imgData) {
 }
 
 function displayImgData(imgData) {
-  document.body.style.background =
-    "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('" +
+  document.querySelector(".background").style.background =
+    "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('" +
     imgData +
     "')";
-  document.body.style.backgroundRepeat = "no-repeat";
-  document.body.style.backgroundSize = "cover";
-  document.body.style.backgroundPosition = "center";
+  document.querySelector(".background").style.backgroundRepeat = "no-repeat";
+  document.querySelector(".background").style.backgroundSize = "cover";
+  document.querySelector(".background").style.backgroundPosition = "center";
 }
 
 function displayNumberOfImgs() {}

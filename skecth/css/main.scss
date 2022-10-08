@@ -11,9 +11,14 @@
   display: none;
   top: 0;
   left: 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   position: fixed;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 999;
   .copyright {
     position: absolute;
@@ -41,8 +46,15 @@
     padding: 20px;
     box-sizing: border-box;
     font-family: "Lexend", sans-serif, "Segoe UI";
-    margin-top: 5rem;
-    background: rgba(0, 0, 0, 0.9);
+    margin-top: 10%;
+    /* From https://css.glass */
+
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     .modal-head {
       h2 {
         font-size: 25px;
@@ -103,6 +115,17 @@
   }
 }
 
+@-webkit-keyframes scaleTomiddle {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 body {
   overflow: hidden;
   background: #000;
@@ -111,107 +134,116 @@ body {
   // background-repeat: no-repeat;
   // background-size: cover;
   // background-position: center;
-  padding: 10px;
-  height: 100vh;
+
   -webkit-font-smoohting: antialiased;
   font-family: "Lexend", sans-serif, "Segoe UI";
-
-  .settings {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    bottom: 2.4%;
-    position: absolute;
-    right: 3%;
-    cursor: pointer;
-    font-size: 15px;
-  }
-  footer {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    bottom: 2.4%;
-    position: absolute;
-    right: 5%;
-    cursor: pointer;
-    font-size: 15px;
-  }
-  .pm {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .infosholat {
-    font-size: 1.2vh;
-    font-weight: normal;
-  }
-  .quote {
-    color: #fff;
-    font-size: 1vh;
-  }
-  .container {
+  .background {
     width: 100%;
-    text-align: left;
-    left: 3%;
-    position: absolute;
-    bottom: 5%;
-    .clock {
-      font-weight: lighter;
-      font-size: 12vh;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100vh;
+    animation: scaleTomiddle 1s ease;
+    .settings {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      bottom: 2.4%;
+      position: absolute;
+      right: 3%;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    footer {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      bottom: 2.7%;
+      position: absolute;
+      right: 6%;
+      cursor: pointer;
+      font-size: 15px;
+      p {
+        margin-top: -10px;
+        font-size: 1.2vh;
+      }
+    }
+    .pm {
+      font-size: 20px;
+      font-weight: bold;
     }
 
-    h1 {
-      font-size: 2.5vh;
-      font-weight: 400;
-      color: #fff;
-      .hero-text {
-        color: #b5edfc;
-      }
+    .infosholat {
+      font-size: 1.1vh;
+      font-weight: normal;
     }
-    .dateday {
-      // float: right;
-      // margin-right: 10px;
+    .quote {
       color: #fff;
+      font-size: 1vh;
+    }
+    .container {
+      width: 100%;
+      text-align: left;
+      left: 3%;
+      position: absolute;
+      bottom: 5%;
+      .clock {
+        font-weight: lighter;
+        font-size: 12vh;
+      }
 
-      font-size: 1.8vh;
-    }
-    .hero-section {
-      animation: 1s slideUp ease-in-out;
-      .focus {
-        .today {
-          font-size: 15px;
-          font-weight: normal;
-          color: #f2f2f2;
-        }
-        .textfocus {
-          margin-top: 1rem;
-          font-size: 15px;
-          font-weight: normal;
-          color: #fff;
-        }
-      }
-      .hero-body {
-        input {
-          margin-top: 1rem;
-          max-width: 700px;
-          display: none;
-          width: 100%;
-          outline: none;
-          background-color: #fff;
-          border: 5px solid #7ea4af;
-          font-family: "Lexend", sans-serif, "Segoe UI";
-          box-sizing: border-box;
-          padding: 20px;
-          color: #000;
-          font-size: 15px;
-          border-radius: 50px;
-        }
-      }
-      .copyright {
+      h1 {
+        font-size: 2.5vh;
+        font-weight: 400;
         color: #fff;
-        margin-top: 1rem;
+        .hero-text {
+          color: #b5edfc;
+        }
+      }
+      .dateday {
+        // float: right;
+        // margin-right: 10px;
+        color: #fff;
+
+        font-size: 1.8vh;
+      }
+      .hero-section {
+        animation: 1s slideUp ease-in-out;
+        .focus {
+          .today {
+            font-size: 13px;
+            font-weight: normal;
+            color: #f2f2f2;
+          }
+          .textfocus {
+            margin-top: 1rem;
+            font-size: 15px;
+            font-weight: normal;
+            color: #fff;
+          }
+        }
+        .hero-body {
+          input {
+            margin-top: 1rem;
+            max-width: 700px;
+            display: none;
+            width: 100%;
+            outline: none;
+            background-color: #fff;
+            border: 5px solid #7ea4af;
+            font-family: "Lexend", sans-serif, "Segoe UI";
+            box-sizing: border-box;
+            padding: 20px;
+            color: #000;
+            font-size: 15px;
+            border-radius: 50px;
+          }
+        }
+        .copyright {
+          color: #fff;
+          margin-top: 1rem;
+        }
       }
     }
   }
