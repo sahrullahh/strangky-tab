@@ -4,6 +4,14 @@
   user-select: none;
 }
 
+header .resolution-info {
+  position: absolute;
+  right: 3%;
+  top: 3%;
+  font-size: 18px;
+  color: white !important;
+}
+
 .modal-overlay {
   width: 100%;
   overflow: auto;
@@ -151,7 +159,7 @@ body .background footer {
   border: none;
   outline: none;
   color: #fff;
-  bottom: 2.7%;
+  bottom: 4.4%;
   position: absolute;
   right: 6%;
   cursor: pointer;

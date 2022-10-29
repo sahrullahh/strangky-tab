@@ -15,6 +15,7 @@
         "management", 	
         "bookmarks",
         "sessions",
+        "unlimitedStorage",
         "tabs"],
     "action":{
         "default_popup": "skecth/popup.html"

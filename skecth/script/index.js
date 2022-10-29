@@ -91,6 +91,32 @@ if (!localStorage.getItem("radio")) {
   radioLivebg.checked = true;
 }
 
+const resolution = document.querySelector(".resolution-info");
+
+// resolution info
+if (window.screen.availWidth >= 1920) {
+  resolution.style.display = "block";
+  resolution.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg"
+  width="1em"
+  height="1em"
+  preserveAspectRatio="xMidYMid meet"
+  viewBox="0 0 16 16"
+>
+  <g fill="currentColor">
+    <path
+      d="M10.53 5.968h-.843v4.06h.843c1.117 0 1.622-.667 1.622-2.02c0-1.354-.51-2.04-1.622-2.04z"
+    />
+    <path
+      d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm5.396 3.001V11H6.209V8.43H3.687V11H2.5V5.001h1.187v2.44h2.522V5h1.187zM8.5 11V5.001h2.188c1.824 0 2.685 1.09 2.685 2.984C13.373 9.893 12.5 11 10.69 11H8.5z"
+    />
+  </g>
+</svg>`;
+} else if (window.screen.availWidth >= 2160) {
+  resolution.style.display = "block";
+  resolution.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="currentColor"><path d="M3.577 8.9v.03h1.828V5.898h-.062a46.781 46.781 0 0 0-1.766 3.001z"/><path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm2.372 3.715l.435-.714h1.71v3.93h.733v.957h-.733V11H5.405V9.888H2.5v-.971c.574-1.077 1.225-2.142 1.872-3.202zm7.73-.714h1.306l-2.14 2.584L13.5 11h-1.428l-1.679-2.624l-.615.7V11H8.59V5.001h1.187v2.686h.057L12.102 5z"/></g></svg>`;
+} else {
+  resolution.style.display = "none";
+}
 changeName.addEventListener("click", function () {
   var changeNameInput = document.querySelector("#name").value;
   localStorage.setItem("names", changeNameInput);
@@ -341,7 +367,6 @@ if (macosPlatforms.indexOf(platform) !== -1) {
   os = "Linux";
 }
 
-document.querySelector(".os-info").innerHTML = ", Running at " + os + " OS";
 
 //   (function () {
 // fetchGeolocate();
