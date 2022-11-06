@@ -1,4 +1,5 @@
-"use strict";
+import '../scss/main.scss';
+
 const store = chrome.storage.sync;
 setTimeout(() => {
   document.title = "New Tab";
