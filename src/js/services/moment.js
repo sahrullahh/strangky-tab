@@ -7,6 +7,9 @@ class Moment {
     static calendarInterval;
 
     constructor() {
+        this.updateCalendar();
+        this.updateClock();
+
         this.calendarInterval = setInterval(() => {
             this.updateCalendar();
             this.updateClock();

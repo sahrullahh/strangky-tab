@@ -68,9 +68,9 @@ export function time(format = 24) {
     disHour = disHour < 10 ? `0${disHour}` : disHour;
 
     return {
-        minute,
         meridiem,
         hour: disHour,
+        minute: minute < 10 ? `0${minute}` : minute,
     };
 }
 
