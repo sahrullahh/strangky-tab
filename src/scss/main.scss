@@ -56,7 +56,12 @@ header {
     padding: 20px;
     box-sizing: border-box;
     font-family: "Lexend", sans-serif, "Segoe UI";
-    margin-top: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
     /* From https://css.glass */
 
     border-radius: 16px;
