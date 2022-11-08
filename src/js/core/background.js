@@ -4,8 +4,6 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-
-
 function injectFunction() {
   // code with on click tabs
 }

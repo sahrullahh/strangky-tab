@@ -60,8 +60,8 @@ header {
     top: 50%;
     left: 50%;
     -ms-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     /* From https://css.glass */
 
     border-radius: 16px;
@@ -188,7 +188,17 @@ body {
       font-size: 20px;
       font-weight: bold;
     }
-
+    .weather-info {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+      font-family: "Lexend", sans-serif, "Segoe UI";
+      color: #fff;
+      .body-weather {
+        display: flex;
+        gap: 10px;
+      }
+    }
     .infosholat {
       font-size: 1.1vh;
       font-weight: normal;
@@ -225,6 +235,7 @@ body {
       }
       .hero-section {
         animation: 1s slideUp ease-in-out;
+
         .focus {
           .today {
             font-size: 13px;
