@@ -25,7 +25,8 @@
       <div class="modal-overlay">
         <div class="modal">
           <div class="modal-head">
-            <h2>Settings</h2>
+            <button class="closebtn"></button>
+            <h2>General</h2>
           </div>
           <div class="modal-body">
             <p>Your name</p>
@@ -37,63 +38,45 @@
               autocomplete="off"
               id="name"
             />
-            <button class="changename" onclick="changeName()">
-              Change name
-            </button>
+
             <br /><br />
-            <input
-              type="radio"
-              id="live-background"
-              class="radio"
-              name="background"
-              checked
-            />
-            <label for="live-background"> Use live background </label>
+            <div class="background-settings">
+              <div class="text">
+                <p>Background :</p>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="live-background"
+                  class="radio"
+                  name="background"
+                  checked
+                />
+                <label for="live-background"> Use live background </label>
+                <br /><br />
+                <input
+                  type="radio"
+                  id="custom-background"
+                  class="radio"
+                  name="background"
+                />
+                <label for="custom-background"> Use custom background </label>
+                <br /><br />
+                <button class="changebackground" id="upload_button">
+                  <span style="margin-right: 5px"
+                    ><i class="fas fa-image"></i></span
+                  >Change background</button
+                ><br />
+              </div>
+            </div>
+
             <br /><br />
-            <input
-              type="radio"
-              id="custom-background"
-              class="radio"
-              name="background"
-            />
-            <label for="custom-background"> Use custom background </label>
-            <br /><br />
-            <button class="changebackground" id="upload_button">
-              <span style="margin-right: 5px"><i class="fas fa-image"></i></span
-              >Change background</button
-            ><br />
-            <br /><br />
-            Select Clock Hours :
+            Hours Format :
             <select name="" id="myclock">
               <option id="12hours" value="12">12 Hours</option>
               <option id="24hours" value="24">24 Hours</option>
             </select>
             <br />
-            <p class="sm">Social media</p>
-            <ul>
-              <li>
-                <a href="https://github.com/sahrullahh"
-                  ><span style="margin-right: 10px"
-                    ><i class="fab fa-github"></i></span
-                  >Github</a
-                >
-              </li>
-              <li>
-                <a href="https://www.instagram.com/shrullhhh04"
-                  ><span style="margin-right: 10px"
-                    ><i class="fab fa-instagram"></i></span
-                  >Instagram</a
-                >
-              </li>
-              <li>
-                <a href=""
-                  ><span style="margin-right: 10px"
-                    ><i class="fab fa-facebook"></i></span
-                  >Facebook</a
-                >
-              </li>
-            </ul>
-            <button class="closebtn">close</button>
           </div>
         </div>
         <p class="copyright">Create By Mohammad Sahrullah</p>

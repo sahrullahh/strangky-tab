@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 0 auto;
   user-select: none;
+  accent-color: tomato;
 }
 
 header {
@@ -53,11 +54,11 @@ header {
     color: #fff;
     max-width: 800px;
     width: 100%;
-    padding: 20px;
+
     box-sizing: border-box;
     font-family: "Lexend", sans-serif, "Segoe UI";
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     -ms-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translate(-50%, -50%);
@@ -68,23 +69,62 @@ header {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10.3px);
     -webkit-backdrop-filter: blur(10.3px);
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    background: rgba(0, 0, 0, 0.4);
+
+    background: rgba(48, 49, 53, 0.8);
     .modal-head {
+      position: relative;
+      background-color: rgba(60, 61, 65, 1);
+      border-bottom: 1px solid #000;
+      border-top-left-radius: 16px;
+      padding: 8px;
+
+      border-top-right-radius: 16px;
       h2 {
-        font-size: 25px;
+        text-align: center;
+        font-size: 15px;
         font-weight: normal;
       }
+      .closebtn {
+        background: #fa514f;
+        float: left;
+        padding: 7px;
+        margin-left: 5px;
+        margin-top: 3px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+      }
     }
+
     .modal-body {
-      margin-top: 2rem;
+      padding-top: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 40px;
+      .background-settings {
+        margin-top: 1rem;
+        margin-left: 0px;
+        max-width: 300px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        gap: 10px;
+        .text {
+          text-align: left;
+        }
+        label {
+          cursor: pointer;
+        }
+      }
       input {
         font-family: "Lexend", sans-serif, "Segoe UI";
         width: 100%;
-        background: #1a1a1a;
-        border: 1px solid #dcdcdc;
+        background: #67696d;
+        border: none;
         color: #fff;
         padding: 10px;
+        border-radius: 5px;
         box-sizing: border-box;
       }
       .radio {
@@ -102,29 +142,26 @@ header {
           color: #000000;
         }
       }
-      .changename {
-        background: #000;
-        border: 1px solid #dcdcdc;
-        color: #fff;
-        margin-top: 1rem;
-      }
       .changefocus {
-        background: #000;
-        border: 1px solid #dcdcdc;
+        background: #67696d;
+        border: none;
         color: #fff;
+        border-radius: 5px;
         margin-top: 1rem;
       }
       .changebackground {
-        background: #000;
-        border: 1px solid #dcdcdc;
+        background: #67696d;
+        border: none;
         color: #fff;
+        border-radius: 5px;
       }
-      .closebtn {
-        float: right;
-        margin-top: -2rem;
-        background: #000;
-        border: 1px solid #dcdcdc;
+      select {
+        margin-left: 10px;
+        padding: 5px;
         color: #fff;
+        font-family: "Lexend", sans-serif, "Segoe UI";
+        border-radius: 5px;
+        background: #67696d;
       }
     }
   }
@@ -165,7 +202,7 @@ body {
       color: #fff;
       bottom: 2.4%;
       position: absolute;
-      right: 3%;
+      right: 2%;
       cursor: pointer;
       font-size: 15px;
     }

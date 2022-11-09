@@ -5,7 +5,6 @@ class Greet {
   letters = document.querySelector(".letters");
   prayTime = document.querySelector(".info-sholat");
 
-  nameBtn = document.querySelector(".changename");
   nameIpt = document.getElementById("name");
 
   constructor() {
@@ -23,11 +22,6 @@ class Greet {
 
   _initListeners() {
     this.nameIpt.addEventListener("keyup", () => {
-      user_name(this.nameIpt.value);
-      this._greet();
-    });
-
-    this.nameBtn.addEventListener("click", () => {
       user_name(this.nameIpt.value);
       this._greet();
     });
