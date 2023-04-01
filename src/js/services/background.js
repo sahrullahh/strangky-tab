@@ -1,51 +1,53 @@
 import { isLiveBg } from "../utils/storage.js";
+
 class Background {
-  background = document.querySelector(".background");
-  changeBg = document.querySelector(".changebackground");
-  static liveBgInterval;
+	background = document.querySelector(".background");
+	changeBg = document.querySelector(".changebackground");
+	static liveBgInterval;
 
-  constructor() {
-    if (isLiveBg() == null || isLiveBg()) this.liveBackground();
-    this.setBackground();
-  }
+	constructor() {
+		if (isLiveBg() == null || isLiveBg()) this.liveBackground();
+		this.setBackground();
+	}
 
-  liveBackground(interval = 10000) {
-    isLiveBg(true);
-    this.changeBg.style.display = "none";
+	liveBackground(interval = 10000) {
+		isLiveBg(true);
 
-    this._liveBackground();
-    this.liveBgInterval = setInterval(() => {
-      this._liveBackground();
-    }, interval);
-  }
+		this.changeBg.style.display = "none";
+		this._liveBackground();
 
-  customBackground() {
-    isLiveBg(false);
-    this.changeBg.style.display = "block";
+		this.liveBgInterval = setInterval(() => {
+			this._liveBackground();
+		}, interval);
+	}
 
-    clearInterval(this.liveBgInterval);
-  }
+	customBackground() {
+		isLiveBg(false);
+		this.changeBg.style.display = "block";
 
-  setBackground(url = null) {
-    url = url ? url : localStorage.getItem("background");
-    localStorage.setItem("background", url);
+		clearInterval(this.liveBgInterval);
+	}
 
-    this.background.style.background = `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${url})`;
-    this.background.style.backgroundRepeat = "no-repeat";
-    this.background.style.backgroundPosition = "center";
-    this.background.style.backgroundSize = "cover";
-  }
+	setBackground(url = null) {
+		url = url ? url : localStorage.getItem("background");
+		localStorage.setItem("background", url);
 
-  async _liveBackground() {
-    const height = window.screen.availHeight,
-      width = window.screen.availWidth;
+		this.background.style.background = `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${url})`;
+		this.background.style.backgroundRepeat = "no-repeat";
+		this.background.style.backgroundPosition = "center";
+		this.background.style.backgroundSize = "cover";
+	}
 
-    fetch(`https://source.unsplash.com/random/${height}x${width}`)
-      .then((res) => res)
-      .then((image) => {
-        this.setBackground(image.url);
-      });
-  }
+	async _liveBackground() {
+		const height = window.screen.availHeight,
+			width = window.screen.availWidth;
+
+		fetch(`https://source.unsplash.com/random/${height}x${width}`)
+			.then((res) => res)
+			.then((image) => {
+				this.setBackground(image.url);
+			});
+	}
 }
 
 export default Background;

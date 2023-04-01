@@ -8,11 +8,12 @@ import "../services/modal.js";
 import "../../scss/main.scss";
 
 async function run() {
-  const background = new Background();
-  const modal = new Modal(background);
-  const greet = new Greet();
-  const moment = new Moment();
-  const weather = new Weather();
+	const background = new Background();
+
+	new Modal(background);
+	new Greet();
+	new Moment();
+	new Weather();
 }
 
 run();
