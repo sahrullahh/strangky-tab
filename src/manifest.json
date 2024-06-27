@@ -4,10 +4,10 @@
     "description": "Strangky is extension for tab custom, you can customize the tab chrome natively, Created By Mohammad Sahrullah",
     "version": "0.1",
     "chrome_url_overrides": {
-        "newtab": "dist/index.html"
+        "newtab": "index.html"
     },
     "background": {
-        "service_worker": "dist/background.js"
+        "service_worker": "background.js"
     },
     "permissions": [
         "storage",
@@ -18,6 +18,6 @@
         "unlimitedStorage",
         "tabs"],
     "action":{
-        "default_popup": "dist/popup.html"
+        "default_popup": "popup.html"
     }
 }

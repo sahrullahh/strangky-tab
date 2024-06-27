@@ -1,1 +1,0 @@
-(()=>{"use strict";function e(){}chrome.runtime.onInstalled.addListener((()=>{chrome.tabs.create({active:!0})})),chrome.action.onClicked.addListener((t=>{chrome.scripting.executeScript({target:{tabId:t.id},function:e})}))})();

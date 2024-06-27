@@ -25,7 +25,10 @@ export default {
     }),
     new MiniCssExtractPlugin(),
     new CopyPlugin({
-      patterns: [{ from: resolve(dirname(""), "src/vendor"), to: "vendor" }],
+      patterns: [
+        { from: resolve(dirname(""), "src/vendor"), to: "vendor" },
+        { from: resolve(dirname(""), "src/manifest.json"), to: "manifest.json" },
+      ],
     }),
   ],
   module: {
