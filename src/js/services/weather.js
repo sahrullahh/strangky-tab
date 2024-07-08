@@ -24,7 +24,7 @@ class Weather {
 			<div class="body-weather" title="${data.weather[0].description}">
 				<div class="icon">
 				${data.weather[0].main.toLowerCase() === "clouds"
-		? ' <i class="fas fa-clouds"></i>'
+		? ' <i class="fas fa-cloud"></i>'
 		: ' <i class="fas fa-cloud-rain"></i>'
 }
 				</div>
