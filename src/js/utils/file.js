@@ -4,7 +4,8 @@ export function readAsDataURL(file) {
 
 		reader.onload = () => {
 			return resolve(reader.result);
-		}
+		};
+
 		reader.onerror = () => reject('error');
 		reader.readAsDataURL(file);
 	});
