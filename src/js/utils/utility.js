@@ -83,5 +83,5 @@ export function calendar() {
 		date: nowDate.getDate(),
 		monthName: months[month],
 		year: nowDate.getFullYear(),
-	}
+	};
 }
