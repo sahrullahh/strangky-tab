@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import nunjucks from 'vite-plugin-nunjucks';
 
 export default defineConfig({
     root: "src",
@@ -15,6 +16,7 @@ export default defineConfig({
         },
     },
     plugins: [
+        nunjucks(),
         viteStaticCopy({
             targets: [
                 {

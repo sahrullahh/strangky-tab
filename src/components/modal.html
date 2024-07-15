@@ -1,0 +1,60 @@
+<div class="modal-overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <button class="closebtn"></button>
+      <h2>General</h2>
+    </div>
+    <div class="modal-body">
+      <p>Your name</p>
+      <br />
+      <input
+        type="text"
+        placeholder=""
+        value="Unamed"
+        autocomplete="off"
+        id="name"
+      />
+      <br /><br />
+      <div class="background-settings">
+        <div class="text">
+          <p>Background :</p>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="live-background"
+            class="radio"
+            name="background"
+            checked
+          />
+          <label for="live-background"> Use live background </label>
+          <br /><br />
+          <input
+            type="radio"
+            id="custom-background"
+            class="radio"
+            name="background"
+          />
+          <label for="custom-background"> Use custom background </label>
+          <br /><br />
+          <button class="changebackground" id="upload_button">
+            <span style="margin-right: 5px"
+              ><i class="fas fa-image"></i></span
+            >Change background</button
+          ><br />
+        </div>
+      </div>
+      <br /><br />
+      Hours Format :
+      <select name="" id="myclock">
+        <option id="12hours" value="12">12 Hours</option>
+        <option id="24hours" value="24">24 Hours</option>
+      </select>
+      <br />
+    </div>
+  </div>
+  <p class="copyright">Create By Mohammad Sahrullah</p>
+</div>
+<button class="settings">
+  <span><i class="fas fa-cog"></i></span>
+</button>
