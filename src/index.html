@@ -1,6 +1,4 @@
-{% extends "src/layout.html" %}
-
-{% block content %}
+{% extends "src/layout.html" %} {% block content %}
 <div class="background">
   <header>
     <div class="resolution-info"></div>
@@ -44,18 +42,33 @@
             />
             <label for="custom-background"> Use custom background </label>
             <br /><br />
-            <button class="changebackground" id="upload_button">
-              <span style="margin-right: 5px"
-                ><i class="fas fa-image"></i></span
+            <button
+              class="changebackground"
+              id="upload_button"
+            >
+              <span style="margin-right: 5px"><i class="fas fa-image"></i></span
               >Change background</button
             ><br />
           </div>
         </div>
         <br /><br />
         Hours Format :
-        <select name="" id="myclock">
-          <option id="12hours" value="12">12 Hours</option>
-          <option id="24hours" value="24">24 Hours</option>
+        <select
+          name=""
+          id="myclock"
+        >
+          <option
+            id="12hours"
+            value="12"
+          >
+            12 Hours
+          </option>
+          <option
+            id="24hours"
+            value="24"
+          >
+            24 Hours
+          </option>
         </select>
         <br />
       </div>
@@ -88,7 +101,11 @@
         </h1>
       </div>
     </section>
-    <input id="files" type="file" hidden />
+    <input
+      id="files"
+      type="file"
+      hidden
+    />
   </div>
   <footer></footer>
 </div>
